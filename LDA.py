@@ -38,8 +38,7 @@ for i in range(len(names)):
     
     for j in range(len(X[y==i])):
         S_i += np.matmul((X[y==i][j].reshape((4,1)) - mean_vectors[i].reshape((4,1))),(X[y==i][j].reshape((4,1)) - mean_vectors[i].reshape((4,1))).T )
-    
-#     S_i = np.sum(np.matmul((X[y==i][j].reshape((4,1)) - mean_vectors[i].reshape((4,1))),(X[y==i][j].reshape((4,1)) - mean_vectors[i].reshape((4,1))).T )for j in range(len(X[y==i])))
+        
     S_W += S_i
     
 #find eigenvalues and eigenvectors of scatter matrices
